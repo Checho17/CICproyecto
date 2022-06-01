@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	html {
+		box-sizing: border-box;
+	  }
+	body{
+		background: blue;
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+	.pcontainer{
+		background: #ffffff;
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+	#proyecto {
+		text-align: justify;
+		margin-top: 10px;
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-bottom: 10px;
+	}
+	#Titl{
+		margin-left: 40px;
+		margin-bottom: 5px;
+		margin-top: 110px;
+	}
+	#Titlesm{
+		margin-left: 60px;
+		margin-bottom: 5px;
+		margin-top: -44px;
+	}
+	
+	
+	.capa::-webkit-scrollbar{
+		background:#0b65ec;
+	}
+	.capa::-webkit-scrollbar-thumb{
+		background:#0b65ec;
+	}
+
+	.ParExp_Titulo{
+		display: block;
+		text-align: left;
+		font-family: 'Montserrat Alternates', sans-serif;
+		color: black;
+		
+		
+	}
+
+	.ParExp_Par{
+		margin: auto;
+		font-size: large;
+		font-family: 'Montserrat Alternates', sans-serif;
+		color: black;
+	}
+	.ParExp_sen{
+		padding-top: 250px;
+		padding-left: 360px;
+		
+
+	}
+
+	#img_capa {
+		margin: 30px auto;
+		width: 50%;
+		text-align: center;
+	}
+	.layout {
+		margin-top: 90px;
+		padding-bottom: 30px;
+	}
+
+	#img_cen{
+		display: flex;
+		width: 70%;
+		margin: auto;
+	}
+	
+	.contenido-mapa-U{
+		padding-top: 50px;
+	}
+	.imag{
+		padding-top: 400px;
+		padding-left: 460px;
+	}
+
+	/*Estilos para el encabezado*/
+	
+	.header{
+		position: fixed;
+		background-color: #096eaf;
+		box-shadow: 0px 7px 6px -2px rgb(249, 194, 75);
+		width: 100%;
+		top: 0;left: 0;
+}
+		.logoMenu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		height: 100%;
+	}
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin: auto;
+		height: 100%;
+		padding: 20px;
+	}
+@media screen and (max-width: 920px) {
+		#logoTitle{
+			font-size: 20px;
+		}
+		.menu {
+			margin-top: 20px;
+		}
+		.menu a {
+			margin: 0 5px;
+		}
+		.layout {
+			margin-top: 120px;
+		}
+	}
+	@media screen and (max-width: 800px) {
+		.container {
+			display: block;
+			height: 100%;
+		}
+		.menu {
+			margin-top: 20px;
+			justify-content: space-between;
+		}
+		.menu a {
+			margin: 0 5px;
+		}
+		.layout {
+			margin-top: 140px;
+		}
+		.logo {
+			margin: 0;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.logoMenu {
+			height:  50%;
+		}
+		.layout {
+			margin-top: 170px;
+		}
+		.menu a{
+			margin: 0 10px;
+			text-align: center;
+		}
+		.header {
+			height: 20%;	
+		}
+		.tab{
+			font-size: 12px;
+		}
+	}
+@media screen and (max-width: 370px) {
+	#logoTitle {
+		font-size: 10px;
+	}
+	.menu {
+		margin: 0;
+		font-size: 12px;
+		
+	}
+	.containerChart {
+		width: 95%;
+	} 
+	}
+
+	.btn-menu {
+		margin: 0;
+	}
+	.btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo {
+		margin: 0 15px;
+	}
+	#logoTitle{
+		color: #fff;
+		font-weight: 400;
+		font-size: 24px;
+		
+	}
+
+	.menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.menu a{
+		display: inline-block;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 18px;
+		margin: 0 10px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid rgb(249, 194, 75);
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+		
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #ffffff;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #0b65ec;
+		background: #303030;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/
+
+
+
+	
+	/*Seleccion de sensor*/
+.father {
+	padding: 0;
+	display: flex;
+	margin: auto;
+	flex-wrap: wrap;
+	justify-content: center;
+}	
+	
+.div-img {
+    margin: 80px;
+    text-align: center;
+		background-color: #035486;
+		padding: 40px;
+    border-radius: 10px;
+    border: 5px solid rgba(231,166,26,1);
+}
+
+.div-img img {
+    display: block;
+    height: 280px;
+    width: 200px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+.div-img a{
+    color: rgba(231,166,26,1);
+    font-size: larger;
+}
+
+.div-img:hover {
+    transition: all .6s ease;
+    background-color: #011933;
+}
+
+.atras img{
+	width: 50px;
+	margin: 0%;
+	padding: 0%;
+}
+
+
+/*Tablas supervision*/
+.tab{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	
+}
+.fat {
+	display: inline-block;
+	margin: 10px;
+}
+.titulo{
+	text-align: center;
+}	
+.table_active{
+	background-color:rgba(231,166,26,1);
+	color: black;
+	text-align: center;
+	
+}
+.table_active, th{
+	padding: 3px;
+}
+
+.table-tr {
+	background-color: #035486;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+.table-tr, td {
+	
+	padding: 5px;
+}
+
+/* Chart */
+
+.containerChart {
+	position: relative;
+	width: 80%;
+	margin: auto;
+}
+
+#myChart {
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+
+
+	/*----*/
+	/*Contacto*/
+
+	* {
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-font-smoothing:antialiased;
+		-moz-font-smoothing:antialiased;
+		-o-font-smoothing:antialiased;
+		text-rendering:optimizeLegibility;
+	}
+	
+	.maps{
+		padding-top: 85px;
+	}
+
+
+	
+	.contacus {
+		padding-top: 60px;
+		max-height: 400px;
+		height: 100%;
+		max-width:400px;
+		width:100%;
+		margin:0 auto;
+		position:center;
+	}
+	
+	
+
+	#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+	
+	#contact {
+		background:#F9F9F9;
+		padding:25px;
+		margin:50px 0;
+	}
+	
+	#contact h3 {
+		color: #F96;
+		display: block;
+		font-size: 30px;
+		font-weight: 400;
+	}
+	
+	#contact h4 {
+		margin:5px 0 15px;
+		display:block;
+		font-size:13px;
+	}
+	
+	fieldset {
+		border: medium none !important;
+		margin: 0 0 10px;
+		min-width: 100%;
+		padding: 0;
+		width: 100%;
+	}
+	
+	#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+		width:100%;
+		border:1px solid #CCC;
+		background:#FFF;
+		margin:0 0 5px;
+		padding:10px;
+	}
+	
+	#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+		-webkit-transition:border-color 0.3s ease-in-out;
+		-moz-transition:border-color 0.3s ease-in-out;
+		transition:border-color 0.3s ease-in-out;
+		border:1px solid #AAA;
+	}
+	
+	#contact textarea {
+		height:100px;
+		max-width:100%;
+	  resize:none;
+	}
+	
+	#contact button[type="submit"] {
+		cursor:pointer;
+		width:100%;
+		border:none;
+		background:#F96;
+		color:#FFF;
+		margin:0 0 5px;
+		padding:10px;
+		font-size:15px;
+	}
+	
+	#contact button[type="submit"]:hover {
+		background:rgb(255, 137, 2);
+		-webkit-transition:background 0.3s ease-in-out;
+		-moz-transition:background 0.3s ease-in-out;
+		transition:background-color 0.3s ease-in-out;
+	}
+	
+	#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+	
+	#contact input:focus, #contact textarea:focus {
+		outline:0;
+		border:1px solid #999;
+	}
+	::-webkit-input-placeholder {
+	 color:#888;
+	}
+	:-moz-placeholder {
+	 color:#888;
+	}
+	::-moz-placeholder {
+	 color:#888;
+	}
+	:-ms-input-placeholder {
+	 color:#888;
+	}
+	
+	
