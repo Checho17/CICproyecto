@@ -34,6 +34,7 @@ function onAuthUser() {
             login.style.display = 'inline'
             supervision.style.display = 'none'
             buttonSignOut.style.display = 'none'
+            gestion.style.display = 'none'
         }
         if(user.email== "chehco1706@gmail.com" || "aapatinof@gmail.com"){
             gestion.style.display = 'block'
