@@ -31,7 +31,7 @@ function onAuthUser() {
 function signgoogle(){
     signInWithPopup(auth, provider)
     .then((result) => {
-        window.location.href = 'cic-vritcompostaje.vercel.app'
+        // window.location.href = 'cic-vritcompostaje.vercel.app'
     }).catch((error) => {
       console.log(error);
     });
