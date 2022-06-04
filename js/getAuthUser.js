@@ -20,15 +20,17 @@ const login = document.querySelector('#login')
 const supervision = document.querySelector('#supervision')
 const gestion = document.querySelector('#gestion')
 const buttonSignOut = document.querySelector('#signout')
+const nombre = document.querySelector('#usuairo')
 
 function onAuthUser() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            console.log(user.email)
+            console.log(user.displayName)
             login.style.display = 'none'
             supervision.style.display = 'block'
             buttonSignOut.style.display = 'inline'
             gestion.style.display = 'none'
+           
 
         } else {
             login.style.display = 'inline'
@@ -36,7 +38,7 @@ function onAuthUser() {
             buttonSignOut.style.display = 'none'
             gestion.style.display = 'none'
         }
-        if(user.email== "chehco1706@gmail.com"){
+        if(user.email == "chehco1706@gmail.com" || user.email =="aapatinof@gmail.com" || user.email == "andrescohecha10@gmail.com" || user.email =="jeifere7@gmail.com"){
             gestion.style.display = 'block'
         }else{
             gestion.style.display = 'none'
