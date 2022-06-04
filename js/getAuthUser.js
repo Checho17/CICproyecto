@@ -28,6 +28,7 @@ function onAuthUser() {
             login.style.display = 'none'
             supervision.style.display = 'block'
             buttonSignOut.style.display = 'inline'
+            gestion.style.display = 'none'
 
         } else {
             login.style.display = 'inline'
