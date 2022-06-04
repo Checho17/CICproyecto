@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="/css/Estilojs.css">
 </head>
 <body>
-
         <main>
-
             <div class="contenedor__todo">
                 <div class="caja__trasera">
                     <div class="caja__trasera-login">
@@ -26,26 +24,25 @@
                         <button id="btn__registrarse">Regístrarse</button>
                     </div>
                 </div>
-
                 <!--Formulario de Login y registro-->
                 <div class="contenedor__login-register">
                     <!--Login-->
-                    <form action="" class="formulario__login">
+                    <form class="formulario__login">
                         <h2>Iniciar Sesión</h2>
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Entrar</button>
-                        <button onclick="signgoogle()">Google</button>
+                        <input type="text" placeholder="Correo Electronico" name="email">
+                        <input type="password" placeholder="Contraseña" name="password">
+                        <button type="submit">Entrar</button>
+                        <button id="googleButton">Google</button>
+                        <span id="errorLogin"></span>
                     </form>
 
                     <!--Register-->
-                    <form action="" class="formulario__register">
+                    <form class="formulario__register">
                         <h2>Regístrarse</h2>
-                        <input type="text" placeholder="Nombre completo">
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="text" placeholder="Usuario">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Regístrarse</button>
+                        <input type="text" placeholder="Correo Electronico" name="email">
+                        <input type="password" placeholder="Contraseña" name="password">
+                        <button type="submit">Regístrarse</button>
+                        <span id="errorRegister"></span>
                     </form>
                 </div>
             </div>

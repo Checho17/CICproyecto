@@ -1,6 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
-
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
+import { GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
 const provider = new GoogleAuthProvider();
 
 const firebaseConfig = {
@@ -19,16 +18,64 @@ const firebaseConfig = {
 
 const auth = getAuth();
 
+function onAuthUser() {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log(user)
+        } else {
+            console.log('Not user')
+        }
+    })
+}
+
 function signgoogle(){
     signInWithPopup(auth, provider)
     .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      console.log(result.user)
-       
+        window.location.href = 'cic-vritcompostaje.vercel.app'
     }).catch((error) => {
       console.log(error);
     });
 }
+
+const googleButton = document.querySelector('#googleButton')
+
+googleButton.addEventListener('click', e => {
+    e.preventDefault()
+    signgoogle()
+})
+
+
+const formRegister = document.querySelector('.formulario__register')
+const formLogin = document.querySelector('.formulario__login')
+const errorRegister = document.querySelector('#errorRegister')
+const errorLogin = document.querySelector('#errorLogin')
+
+formRegister.addEventListener('submit', e => {
+    e.preventDefault()
+    const data = Object.fromEntries(new FormData(e.target))
+    createUserWithEmailAndPassword(auth, data.email, data.password)
+        .then(credential => {
+            window.location.href = 'cic-vritcompostaje.vercel.app'
+        })
+        .catch(err => {
+            console.log('Error register', err)
+            errorRegister.innerHTML = err.code
+        })
+})
+
+formLogin.addEventListener('submit', e => {
+    e.preventDefault()
+    const data = Object.fromEntries(new FormData(e.target))
+    signInWithEmailAndPassword(auth, data.email, data.password)
+        .then(credential => {
+            window.location.href = 'cic-vritcompostaje.vercel.app'
+        })
+        .catch(err => {
+            console.log('Error login', err)
+            errorLogin.innerHTML = err.code
+        })
+})
+
 
 
 //Ejecutando funciones

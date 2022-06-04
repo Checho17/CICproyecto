@@ -89,7 +89,24 @@
 		padding-top: 400px;
 		padding-left: 460px;
 	}
-
+	#signout{
+		/* background-color: rgb(249, 194, 75); */
+		background: transparent;
+		display: inline-block;
+		line-height: normal;
+		text-decoration: none;
+		color: white;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+		font-size: 18px;
+		margin: 0 10px;
+	}
+	#signout:hover{
+		border-bottom: 2px solid rgb(249, 194, 75);
+		
+		padding-bottom: 5px;
+	}
 	/*Estilos para el encabezado*/
 	
 	.header{
