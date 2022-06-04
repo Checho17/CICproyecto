@@ -36,7 +36,7 @@ function onAuthUser() {
             buttonSignOut.style.display = 'none'
             gestion.style.display = 'none'
         }
-        if(user.email== "chehco1706@gmail.com" || "aapatinof@gmail.com"){
+        if(user.email== "chehco1706@gmail.com"){
             gestion.style.display = 'block'
         }else{
             gestion.style.display = 'none'

@@ -55,7 +55,7 @@ formRegister.addEventListener('submit', e => {
     const data = Object.fromEntries(new FormData(e.target))
     createUserWithEmailAndPassword(auth, data.email, data.password)
         .then(credential => {
-            window.location.href = 'cic-vritcompostaje.vercel.app'
+            // window.location.href = 'cic-vritcompostaje.vercel.app'
         })
         .catch(err => {
             console.log('Error register', err)
@@ -68,7 +68,7 @@ formLogin.addEventListener('submit', e => {
     const data = Object.fromEntries(new FormData(e.target))
     signInWithEmailAndPassword(auth, data.email, data.password)
         .then(credential => {
-            window.location.href = 'cic-vritcompostaje.vercel.app'
+            // window.location.href = 'cic-vritcompostaje.vercel.app'
         })
         .catch(err => {
             console.log('Error login', err)
