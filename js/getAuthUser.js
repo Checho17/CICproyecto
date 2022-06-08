@@ -52,6 +52,7 @@ function signOutUser() {
     signOut(auth)
         .then(() => {
            console.log('user logout') 
+           window.location.href = '/index.html'
         })
         .catch(err => console.log('error signout', err))
 }
